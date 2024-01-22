@@ -1,0 +1,112 @@
+.achievments {
+    margin-top: 3rem;
+}
+.achievments-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 6rem;
+}
+.achievments-right p {
+    margin: 1.2rem 0 2.5rem;
+}
+.achievments-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.achievments-icon img{
+    margin: 0.5rem auto 1rem;
+}
+.achievments-card {
+    background: var(--color-bg1);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 1rem;
+    transition: var(--transition);
+    padding: 1.6rem;
+}
+.achievments-card:hover {
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgb(0, 0, 0, 0.3);
+}
+.achievments-card p {
+    margin-bottom: 1rem;
+}
+.team {
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgb(0, 0, 0, 0.5);
+}
+.team h2 {
+    text-align: center;
+}
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.member {
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    overflow: hidden;
+    position: relative;
+}
+.member:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+.member-image img {
+    filter: saturate(0);
+}
+.member:hover .member-image img {
+    filter: saturate(1);
+}
+.member-info {
+    margin: 2rem auto 0;
+    text-align: center;
+}
+.member-info p {
+    margin: 1rem 0 0;
+    color: var(--color-light);
+}
+.member-socials .socials{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgb(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+.member:hover .member-socials .socials {
+    right: 0;
+}
+/*========TABLETS=======*/
+@media screen and (max-width: 1024px){
+    .achievments {
+        margin-top: 3rem;
+    }
+    .achievments-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .achievments-left {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .achievments-right {
+        text-align: center;
+    }
+}
+/*=======PHONES =========*/
+@media screen and (max-width: 720px){
+    .achievments-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
